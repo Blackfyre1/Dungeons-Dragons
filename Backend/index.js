@@ -7,9 +7,11 @@ const itemRoutes = require('./routes/itemRoutes');
 const weaponRoutes = require('./routes/weaponRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const spellRoutes = require('./routes/spellRoutes');
+const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+app.use(cors());
+const PORT = 3001;
 
 // Middleware to parse JSON
 app.use(express.json());
