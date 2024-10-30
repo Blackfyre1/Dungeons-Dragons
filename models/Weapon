@@ -1,0 +1,12 @@
+const mongoose = require('mongoose');
+
+const weaponSchema = new mongoose.Schema({
+    name: String,
+    type: String,  // e.g., 'sword', 'bow'
+    damage: String, // e.g., '1d8 + 3'
+    range: Number,
+    description: String,
+});
+
+const Weapon = mongoose.model('Weapon', weaponSchema);
+module.exports = Weapon;
